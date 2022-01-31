@@ -48,7 +48,7 @@ public class PatientService {
 		Family familyMember =familyRepository.findById(familyMemberId)
 				.orElseThrow(() -> new ResourceNotFoundException("FamilyMember not found for this id :: " + familyMemberId));
 
-		familyMember.setEmail_id(familyMemberDetails.getEmail_id());
+		familyMember.setEmail(familyMemberDetails.getEmail());
 		familyMember.setLastName(familyMemberDetails.getLastName());
 		familyMember.setFirstName(familyMemberDetails.getFirstName());
 		familyMember.setAge(familyMemberDetails.getAge());
